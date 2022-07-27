@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO OOP: Dong goi, ke thua, da hinh, truu tuong
 		// I. Dong goi
-		// bao dam tinh dung dan, toan ven cua du lieu.
+		// bao dam tinh dung dan, toan ven, an toan cua du lieu.
 		// khong the goi truc tiep => goi qua get or set
 		// dung get de khong can refactor code nhieu noi
 		
