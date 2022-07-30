@@ -6,6 +6,9 @@ import java.util.Scanner;
 
 public class Main {
 
+	private static StudentList studentList = new StudentList();
+	private static Scanner scanner = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// array have hard length, array list have flexible length.
@@ -27,6 +30,7 @@ public class Main {
 		listIntegers.add(23);
 		listIntegers.add(44);
 		printArrayList(listIntegers);
+
 	}
 
 	public static void calculateAverage() {
@@ -46,15 +50,14 @@ public class Main {
 		}
 
 	}
+	
 	public static void printArrayList(ArrayList<Integer> listIntegers) {
 //		for (int i = 0; i < listIntegers.size(); i++) {
 //			System.out.print(listIntegers.get(i) + ", ");
 //		}
-//		listIntegers.remove(2);
 		listIntegers.sort(Comparator.naturalOrder());
 		for (Integer integer : listIntegers) {
 			System.out.print(integer + ", ");
 		}
-
 	}
 }
