@@ -1,7 +1,6 @@
 package linked_list_java;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
@@ -120,7 +119,7 @@ public class Main {
 
 		System.out.println("-----------------");
 
-		LinkedList interLinkedList = new LinkedList();
+		LinkedList<Integer> interLinkedList = new LinkedList<Integer>();
 		milisecond = System.currentTimeMillis();
 		for (int i = 0; i < n; i++) {
 			interLinkedList.add(i);
@@ -176,9 +175,34 @@ public class Main {
 			}
 		});
 		Collections.sort(studentList, new AgeReverseComparator());
-		for (Student student : studentList) {
-			System.out.println(student);
+//		for (Student student : studentList) {
+//			System.out.println(student);
+//		}
+		
+		// PART 2: Comparator
+		
+		// PART 3: Comparable
+		List<Human> humanList = new ArrayList<Human>();
+		humanList.add(new Human(1, 18, "AAA"));
+		humanList.add(new Human(2, 16, "BBB"));
+		humanList.add(new Human(3, 15, "CCC"));
+		humanList.add(new Human(4, 14, "DDD"));
+		humanList.add(new Human(5, 13, "EEE"));
+		humanList.add(new Human(6, 12, "FFF"));
+		
+		Collections.sort(humanList); 
+		// doi tuong phai implement interface Comparable moi co the su dung phuong thuc Collections sort
+		// Cac doi tuong nguyen thuy thi co the su dung duoc luon.
+		
+		for (Human human : humanList) {
+			System.out.println(human);
 		}
+		// So sanh:
+		// comparable: java.lang: dinh nghia theo kieu sort tu nhien cua 1 Object, comparator: java.util, sap xep nhieu kieu, uyen hon
+		// Comparable chi co the su dung 1 dieu kien de sort, con comparator thi nhieu dieu kien hon
+		// Comparable viet vao class goc, con comparator co the viet o rac nhieu cac class
+		// Comparable: Collections.sort(list), Comparator: Collections.sort(list, Comparator);
+		// PART 3: Comparable
 	}
 
 }
